@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { UserActionComponent } from './components/user-action/user-action.component';
 import { UserInformationComponent } from './components/user-information/user-information.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/user-register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
