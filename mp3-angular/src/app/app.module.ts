@@ -6,19 +6,29 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { UserActionComponent } from './components/user-action/user-action.component';
 import { UserInformationComponent } from './components/user-information/user-information.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './service/user.service';
+import { ParentComponent } from './components/parent/parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UserActionComponent,
-    UserInformationComponent
+    UserInformationComponent,
+    HomeComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
