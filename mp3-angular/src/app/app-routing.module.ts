@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { UserInformationComponent } from './components/user/user-information/user-information.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 
@@ -9,8 +10,29 @@ import { SongUploadComponent } from './components/song/song-upload/song-upload.c
 import { HomeComponent } from './components/layout/home/home.component';
 
 
+
+
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'homemp3',
+    pathMatch: 'full',
+  },
+  {
+    path: 'homemp3',
+    component: ParentComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
+      },
+      {
+        path: 'userinfo',
+        component: UserInformationComponent,
+      }
+    ]
+  },
+{
     path: 'register',
     component: UserRegisterComponent,
   },
@@ -31,6 +53,7 @@ const routes: Routes = [
     component: UserInformationComponent,
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

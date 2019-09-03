@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  logged = true;
+  
+  login() {
+    this.logged = !this.logged;
+  }
+
   title = 'mp3-angular';
 }
