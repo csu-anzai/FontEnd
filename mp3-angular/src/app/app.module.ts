@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { ParentComponent } from './components/parent/parent.component';
+import { RegisterComponent } from './components/user-register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import { ParentComponent } from './components/parent/parent.component';
     UserActionComponent,
     UserInformationComponent,
     HomeComponent,
-    ParentComponent
+    ParentComponent,
+    RegisterComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    HttpClientModule
+    FormsModule
+
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
