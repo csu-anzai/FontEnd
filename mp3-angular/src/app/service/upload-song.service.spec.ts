@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ServiceService } from './service.service';
+import { UploadSongService } from './upload-song.service';
 
-describe('ServiceService', () => {
+describe('UploadSongService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ServiceService = TestBed.get(ServiceService);
+    const service: UploadSongService = TestBed.get(UploadSongService);
     expect(service).toBeTruthy();
   });
 });

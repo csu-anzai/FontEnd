@@ -5,13 +5,12 @@ import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/service/register.service';
 import { IUser } from 'src/app/model/user/user.model';
 
-
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-user-register',
+  templateUrl: './user-register.component.html',
+  styleUrls: ['./user-register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class UserRegisterComponent implements OnInit {
   registerForm: FormGroup;
   errorMessage:any;
   isRegisterFailed = false;
@@ -49,6 +48,7 @@ export class RegisterComponent implements OnInit {
       this.registerService.register(value).subscribe(
         next => {
           alert("Successful");
+          this.router.navigate(['/']);
 
         },
         error => {

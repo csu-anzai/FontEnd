@@ -3,19 +3,30 @@ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header/header.component';
-import { UserActionComponent } from './components/user-action/user-action.component';
-import { UserInformationComponent } from './components/user-information/user-information.component';
-import { RegisterComponent } from './components/user-register/register.component';
+import { UserInformationComponent } from './components/user/user-information/user-information.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+
+import { UserRegisterComponent } from './components/user/user-register/user-register.component';
+import { SongUploadComponent } from './components/song/song-upload/song-upload.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { BodyComponent } from './components/layout/body/body.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { HomeComponent } from './components/layout/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    UserActionComponent,
     UserInformationComponent,
-    RegisterComponent
+    UserUpdateComponent,
+    SongUploadComponent,
+    UserRegisterComponent,
+    SongUploadComponent,
+    FooterComponent,
+    BodyComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
