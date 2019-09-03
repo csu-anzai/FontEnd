@@ -11,5 +11,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+  logged = true;
+  
+  login() {
+    this.logged = !this.logged;
+  }
 
 }

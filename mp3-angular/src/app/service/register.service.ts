@@ -12,11 +12,16 @@ const httpOptions = {
 })
 export class RegisterService {
 
-  private url = "http://localhost:8080"
+  private URL = "http://localhost:8080"
   constructor(private http: HttpClient) { }
 
   register(data:IUser): Observable<any>{
-    return this.http.post<any>(`${this.url}/register`, data, httpOptions);
+    return this.http.post<any>(`${this.URL}/register`, data, httpOptions);
   }
- 
+  getUserById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.URL}/myprofile/${id}`);
+}
+updateProfile(myInfor: any): Observable<any> {
+  return this.http.put<any>(`${this.URL}/myprofile/${myInfor.id}`, myInfor, httpOptions);
+}
 }
