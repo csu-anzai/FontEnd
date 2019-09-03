@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/homemp3/userinfo']" routerLinkActive="router-link-active">TOP VIEWS
+        <a class="nav-link" >TOP VIEWS
           PLAYLISTS <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -33,7 +33,7 @@
           Hi Hai
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" [routerLink]="['/homemp3/userinfo']" routerLinkActive="router-link-active">Profile</a>
           <a class="dropdown-item" href="#">My Collection</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Logout</a>
