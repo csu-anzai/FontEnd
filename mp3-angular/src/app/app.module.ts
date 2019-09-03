@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { UserActionComponent } from './components/user-action/user-action.component';
 import { UserInformationComponent } from './components/user-information/user-information.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './service/user.service';
+import { ParentComponent } from './components/parent/parent.component';
 import { RegisterComponent } from './components/user-register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     UserActionComponent,
     UserInformationComponent,
+    HomeComponent,
+    ParentComponent,
     RegisterComponent
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule
 
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
